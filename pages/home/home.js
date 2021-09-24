@@ -5,8 +5,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+        name:'忽然你',
+        age:23,
+        movies:['a','b','c','d'],
+        students:[
+          {id:110,name:'a',age:12},
+          {id:110,name:'b',age:13}
+        ],
+        counter:0
   },
+ 
+  handleBtnClick(){
+      // this.data.counter+=1;
+      // console.log('按钮发生了点击');
+      // console.log(this.data.counter);
+
+      /**
+       * 下面是正确的写法
+       */
+   
+      this.setData({
+        counter:this.data.counter+=1
+      });
+  },
+  handlerSubtraction(){
+    this.setData({
+      counter:this.data.counter-1
+    });
+  },
+
+
 
   /**
    * 生命周期函数--监听页面加载

@@ -1,3 +1,13 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World2</text>
-<button size='mini'>按钮</button>
+<view>Hello {{name}}</view>
+<view>age:{{age}}</view>
+<view>{{movies}}</view>
+<!-- 列表展示 wx:for -->
+<view>{{students[0].name}}-{{students[0].age}}</view>
+<view wx:for="{{students}}">{{item.name}}-{{item.age}}</view>
+
+<!-- 事件监听 改变数据-->
+
+<view>当前计数：{{counter}}</view>
+<button size="mini" bindtap="handleBtnClick">+</button>
+<button size="mini" bindtap="handlerSubtraction">-</button>
