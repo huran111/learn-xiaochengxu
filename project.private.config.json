@@ -1,0 +1,29 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/text/text",
+          "pathName": "pages/text/text",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/button/button",
+          "pathName": "pages/button/button",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
