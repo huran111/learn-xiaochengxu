@@ -1,0 +1,22 @@
+<!--pages/image/image.wxml-->
+<image src="https://ns-strategy.cdn.bcebos.com/ns-strategy/upload/fc_big_pic/part-00070-1004.jpg"></image>
+<image src="https://ns-strategy.cdn.bcebos.com/ns-strategy/upload/fc_big_pic/part-00070-1004.jpg"></image>
+
+
+<button bindtap="handleChooseAlbum">选中图片</button>
+<image src="{{imagePath}}"></image>
+<view>------------------------------------------------------------------</view>
+<!--lazy-load ：图片懒加载-->
+<!-- bindload : 监听图片加载完成-->
+<image wx:for="{{10}}" src="https://ns-strategy.cdn.bcebos.com/ns-strategy/upload/fc_big_pic/part-00070-1004.jpg"
+ bindload="handleImageLoad" lazy-load="{{true}}"></image>
+
+
+
+  <!-- 长按图片出现识别下程序码-->
+ <image  show-menu-by-longpress src="https://ns-strategy.cdn.bcebos.com/ns-strategy/upload/fc_big_pic/part-00070-1004.jpg"></image>
+
+
+
+
+ 

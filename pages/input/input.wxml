@@ -1,0 +1,16 @@
+<!--pages/input/input.wxml-->
+<input/>
+
+
+<input value="地方"/>
+
+<input type='digit'/>
+
+<input password />
+
+<input placeholder="请输入内容"/>
+
+<!-- input绑定事件-->
+<input bindinput="handleInput"
+  bindfocus="handleFocus"
+  bindblur="handleBlur" />
