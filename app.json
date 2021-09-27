@@ -1,7 +1,41 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/text/text"
+ 
   ],
+  "window": {
+    "navigationBarBackgroundColor": "#3b97da",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "智能灭火器",
+    "backgroundColor": "#090108",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#3b97da",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "assets/tabbar/home.png",
+        "selectedIconPath": "assets/tabbar/home_active.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "购物",
+        "iconPath": "assets/tabbar/category.png",
+        "selectedIconPath": "assets/tabbar/category_active.png"
+      },
+      {
+        "pagePath": "pages/text/text",
+        "text": "text",
+        "iconPath": "assets/tabbar/category.png",
+        "selectedIconPath": "assets/tabbar/category_active.png"
+      }
+
+    ]
+  },
   "sitemapLocation": "sitemap.json"
 }

@@ -8,6 +8,21 @@
 
 <!-- 事件监听 改变数据-->
 
-<view>当前计数：{{counter}}</view>
+<view class="title">当前计数：{{counter}}</view>
 <button size="mini" bindtap="handleBtnClick">+</button>
 <button size="mini" bindtap="handlerSubtraction">-</button>
+
+<!-- 获取用户信息的方式-->
+<button size="mini" open-type="getUserInfo"  bindgetuserinfo="handleGetUserInfo" >获取授权</button>
+
+<!-- 获取用户信息的方式 展示 -->
+<open-data type="userNickName"></open-data>
+<open-data type="userNickName"></open-data>
+<open-data type="userGender"></open-data>
+<open-data type="groupName"></open-data>
+<!-- <open-data type="userAvatarUrl"></open-data> -->
+
+
+
+<view wx:for="{{list}}">{{item}}</view>
+
