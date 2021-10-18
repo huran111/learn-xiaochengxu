@@ -1,3 +1,34 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World2</text>
-<button size='mini'>按钮</button>
+<!-- 事件 处理 的回顾 -->
+<button bindtap="handleBtnClick" size="mini"> 按钮</button>
+
+
+<button bind:tap="handleBtnClick" size="mini"> 按钮</button>
+
+
+<button catch:tap="handleBtnClick" size="mini"> 按钮</button>
+
+<!-- 常见的一些事件 tap 和 longpress 事件通常只会触发其中一个 -->
+
+<view class='box' 
+  bind:touchstart="handleTouchStart"
+  bind:touchmove="hanldeTouchMove"
+  bind:touchend="handleTouchEnd" 
+  bind:tap="handleTap"
+  bind:longpress="handleLongPress">a</view>
+
+
+  <!-- 事件对象的分析 -->
+
+  <button  id="btn" size="mini" bindtap="handleEventClick" bindtouchend="handlebindtouchendEventClick">点击</button>
+
+ <view class='outer' id="outer" bindtap="handleOuter">
+ 外层的
+  <view class="inner" id="inner" bindtap="handleInner">
+  内层的</view>
+ </view>
+
+  <!-- 
+    touches 记录当前有几个手指在小程序中触摸的，以及对应的触摸点的信息
+    changedTouches 记录变化的，原来几个手指 后来几个手指触摸
+  -->

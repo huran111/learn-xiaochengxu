@@ -1,0 +1,30 @@
+/* pages/wxss/wxss.wxss */
+/*导入样式*/
+@import './sytle/box.wxss';
+.box{
+  color:blue
+}
+.content{
+  background: pink !important;
+}
+.active{
+  color: pink;
+}
+.box1{
+  width: 100px;
+  height: 100px;
+  background: orange;
+}
+
+.box2{
+  width: 200rpx;
+  height: 200rpx;
+  background: purple;
+}
+
+.content1{
+  font-size: 64rpx;
+}
+.content2{
+  font-size: 64rpx;
+}

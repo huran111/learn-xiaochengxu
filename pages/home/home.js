@@ -7,7 +7,40 @@ Page({
   data: {
 
   },
+  handleBtnClick(){
+    console.log('按钮发生点击')
+  },
+  handleTouchStart(){
+      console.log("手指触摸");
+  },
+  hanldeTouchMove(){
+    console.log("手指移动");
 
+  },
+  handleTouchEnd(){
+    console.log("手指离开");
+
+  },
+  handleLongPress(){
+      console.log("手指停留")
+  },
+  handleTap(){
+      console.log("handleTap")
+  },
+  handleEventClick(event){
+    console.log(event)
+ console.log("handleEventClick");
+  },
+  handlebindtouchendEventClick(event){
+    console.log(event)
+  },
+
+  handleInner(event){
+  console.log(event)
+  },
+  handleOuter(event){
+ console.log(event)
+  },
   /**
    * 生命周期函数--监听页面加载
    */

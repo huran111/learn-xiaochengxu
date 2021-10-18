@@ -1,0 +1,91 @@
+<!-- 设置样式 的三种方式  -->
+<view class="box"></view>
+
+<!-- 行内样式 -->
+<view style="color:red;font-size:32px">哈换</view>
+
+<!-- 页内 样式 -->
+<view class="box">哈换</view>
+
+
+<!-- 全局样式 -->
+<view hidden class="container">嘿嘿嘿嘿 咻咻咻</view>
+
+<!-- 权重 优先级 -->
+<view style="background:red;" class="content"> ss</view>
+
+
+<!--wxss中的单位 rpx-- 自适应适配 -->
+<view class="box1">aaa</view>
+
+<view class="box2">aaa</view>
+
+
+<view class="content1">哈哈哈</view>
+<view class="content2">呵呵呵</view>
+
+<view>{{age >=18 ? 'A':'B'}}</view>
+<view>{{nowTime}}</view>
+
+<view class="box {{isActive ? 'active':''}}">哈换</view>
+<button size="mini" bindtap="handleSwitchColor">切换颜色</button>
+
+<view>--------------条件判断-----------------</view>
+<button size="mini" bindtap="handleSwitchColor2">切换颜色</button>
+<view  class="handleSwitchColor2" wx:if="{{isShow}}">哈哈哈</view>
+
+<view wx:if="{{score >=90}}">优秀</view>
+<view wx:elif="{{score >=80}}">良好</view>
+<view wx:elif="{{score >=60}}">及格</view>
+<view wx:else>不及格</view>
+
+
+<!--hidde属性-->
+<view>----------------hidde属性</view>
+<!-- hidden隐藏将一个组件隐藏起来 该组件依然存在 display none-->
+<view  hidden="{{false}}">hidden隐藏</view>
+<!--wx:if隐藏 该组件根本不存在-->
+<view wx:if="{{false}}">wx:if隐藏</view>
+
+<view>-----------------列表渲染</view>
+<!-- <view wx:for="{{['a','b','c']}}">{{item}} {{index}}</view>
+
+<view wx:for="huran">{{item}} {{index}}</view>
+
+<view wx:for="{{9}}">{{item}}</view> -->
+
+
+<block>
+  <view>哈哈</view>
+  <view>哈哈</view>
+</block>
+
+
+<view wx:for="{{movies}}" wx:for-item="movie" wx:for-index="i">{{movie}}</view>
+<block wx:for="{{nums}}" wx:for-item="innerItem">
+  <block wx:for="{{innerItem}}">
+    <view>{{item}}</view>
+  </block>
+</block>
+<view>--------------------------------------------</view>
+<!-- key的作用 -->
+<view wx:for="{{letters}}">{{item}}</view>
+
+
+<!-- 模板用法 -->
+<view>---------------template---------------------</view>
+
+
+<import src="/wxml/template.wxml"></import>
+<template is="contentItem" data="{{btnText:'按钮',content:'哈哈'}}"></template>
+<template is="contentItem" data="{{btnText:'警告',content:'呵呵呵'}}"></template>
+<!-- 导入wxs -->
+<wxs src="../../wxs/info.wxs" module="info"></wxs>
+<view>{{info.message}}</view>
+
+<view>{{info.name}}</view>
+<view>{{info.sum(1,2)}}</view>
+
+<!-- 3 wxs 的应用-->
+<wxs src="../../wxs/format.wxs" module="format"></wxs>
+<view>{{format.priceFormat(price,3)}}</view>
