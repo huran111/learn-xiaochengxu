@@ -1,8 +1,7 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/wxss/wxss",
-    "pages/wxs/wxs"
+    "pages/wxss/wxss"
   ],
   "sitemapLocation": "sitemap.json"
 }

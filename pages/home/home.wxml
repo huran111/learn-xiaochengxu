@@ -20,15 +20,35 @@
 
   <!-- 事件对象的分析 -->
 
+  <!-- 
+    touches 记录当前有几个手指在小程序中触摸的，以及对应的触摸点的信息
+    changedTouches 记录变化的，原来几个手指 后来几个手指触摸
+  -->
   <button  id="btn" size="mini" bindtap="handleEventClick" bindtouchend="handlebindtouchendEventClick">点击</button>
-
+ 
+  <!--  target 记录的是当前产生的事件对象  currentTag记录的是当前触发的事件对象-->
  <view class='outer' id="outer" bindtap="handleOuter">
  外层的
   <view class="inner" id="inner" bindtap="handleInner">
   内层的</view>
  </view>
 
-  <!-- 
-    touches 记录当前有几个手指在小程序中触摸的，以及对应的触摸点的信息
-    changedTouches 记录变化的，原来几个手指 后来几个手指触摸
-  -->
+<!-- 事件的参数传递-->
+
+<view class="container">
+  <block wx:for="{{titles}}" wx:key="{{index}}">
+    <view class="item" bindtap="handleItemClick"
+     data-index="{{index}}"
+     data-item="{{item}}">{{item}}</view>
+  </block>
+</view>
+
+
+<!-- 事件冒泡和捕获 -->
+<!-- bind 一层层传递-->
+<!-- catch :阻止事件进一步传递-->
+<view class="view1"  capture-bind:tap="handlerCaptureView1" bindtap="handleBindView1">
+  <view class="view2" capture-bind:tap="handlerCaptureView2" catchtap="handleBindView2">
+    <view class="view3" capture-bind:tap="handlerCaptureView3" bindtap="handleBindView3"></view>
+  </view>
+</view>
