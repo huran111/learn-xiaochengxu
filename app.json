@@ -1,7 +1,16 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/about/about"
+    "pages/about/about",
+    "components/my-cpn/my-cpn",
+    "components/my-cpn1/my-cpn1",
+    "components/my-style/my-style",
+    "components/my-prop/my-prop",
+    "components/my-event/my-event",
+    "components/w-tab-control/w-tab-control",
+    "components/my-select/my-select",
+    "components/my-solt/my-solt"
   ],
+  "usingComponents": {},
   "sitemapLocation": "sitemap.json"
 }

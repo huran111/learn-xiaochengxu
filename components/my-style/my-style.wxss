@@ -1,0 +1,7 @@
+.title{
+  font-size: 50rpx;
+  font-weight: 700;
+}
+.content{
+  font-size: 36rpx;
+}

@@ -5,9 +5,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    counter:0,
+    value:0
   },
-
+  handleIncrement(event){
+    console.log(event)
+    this.setData({
+      counter:this.data.counter+1
+    })
+  },
+  handleTabClick(event){
+      console.log(event)
+  },
+  handZuJianNeiCpn(){
+   const my_sel =  this.selectComponent(".select-class")
+   console.log(my_sel)
+  //  my_sel.setData({
+  //    counter:my_sel.data.counter+1
+  //  })
+  my_sel.incrementCounter(10)
+  },
+  yidongclick(){
+ console.log("-----")
+ this.setData({
+   value:this.data.value+1
+ })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

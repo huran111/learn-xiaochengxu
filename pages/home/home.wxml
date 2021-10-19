@@ -1,3 +1,50 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World2</text>
 <button size='mini'>按钮</button>
+
+<!--使用自定义组件-->
+
+<my-cpn/>
+
+<!-- 自定义组件样式 -->
+<my-sytle/>
+
+<view>------------------------</view>
+<my-prop title="哈换" titleclass="red"/>
+<my-prop title="六六六" titleclass="green"/>
+<my-prop/>
+
+<!-- 自定义组件 -->
+<view>当前计数:{{counter}}</view>
+<my-event bind:increment="handleIncrement"/>
+
+<w-tab-control titles="{{['衣服','鞋子','手机','内衣','电器']}}" bind:itemClick="handleTabClick"/>
+
+<!-- 直接选中组件修改数据  调用方法-->
+<button size="mini" bindtap="handZuJianNeiCpn">修改组件内的数据</button>
+<my-select class="select-class"/>
+
+
+<view>------------------------插槽的使用</view>
+<!-- <my-slot>
+  <button size="mini">我是插入的按钮</button>
+</my-slot>
+
+<my-slot>
+  <text>哈哈哈哈哈</text>
+</my-slot> -->
+
+
+<!-- <my-slot>
+  <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F18%2F08%2F24%2F05dbcc82c8d3bd356e57436be0922357.jpg&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637221322&t=a36de009707abeda2a4fbeddae37824c"></image>
+</my-slot> -->
+<!-- <my-slot>
+  <slider value="{{value}}"></slider>
+  <button size="mini" bindtap="yidongclick">移动</button>
+</my-slot> -->
+
+<!-- 多个插槽的使用 -->
+<my-slot>
+  <button size="mini" >撒旦发射点</button>
+  <slider ></slider>
+</my-slot>

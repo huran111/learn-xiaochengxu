@@ -1,0 +1,15 @@
+Component({
+  options:{
+      styleIsolation:"isolated"
+  },
+  properties:{
+    title:{
+      type:String,
+      value:'我是默认的标题',
+      observer:function(newVal,oldVal){
+        console.log(newVal,oldVal)
+      }
+    }
+  },
+  externalClasses:['titleclass']
+})
