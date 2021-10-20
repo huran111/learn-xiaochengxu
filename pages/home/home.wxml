@@ -1,3 +1,47 @@
-<!--pages/home/home.wxml-->
-<text class="title">Hello World2</text>
-<button size='mini'>按钮</button>
+<!-- 弹窗 -->
+<button size="mini" bindtap="handleShowToast">点击</button>
+
+
+<button size="mini" bindtap="handleShowModal">showModal</button>
+
+
+<button size="mini" bindtap="handleShowLoading">handleShowLoading</button>
+
+
+
+
+
+
+
+<button size="mini" bindtap="handleShowAction">handleShowAction</button>
+
+
+<button size="mini" open-type="share">分享</button>
+
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授权获取头像昵称 </button>
+
+
+
+<!-- 页面跳转 -->
+
+<navigator url="/pages/details/details">跳转到详情页</navigator>
+
+<!-- redirect 关闭当前页面，跳转到另外的页面 不允许跳转到tarbar页面-->
+<navigator url="/pages/details/details" open-type="redirect">跳转到详情页redirect </navigator>
+
+
+<navigator url="/pages/about/about" open-type="switchTab">跳转到详情页switchTab </navigator>
+
+<navigator url="/pages/details/details" open-type="reLaunch">跳转到详情页(reLaunch) </navigator>
+
+
+<!-- 跳转过程中 数据的传递 -->
+
+<navigator url="/pages/details/details?name=why&age=18">跳转到详情页数据</navigator>
+
+<view>{{title}}</view>
+
+<!-- 通过代码进行页面跳转-->
+
+<button size="mini" bindtap="handlePushDetails">代码页面跳转</button>
+
